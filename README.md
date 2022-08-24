@@ -42,7 +42,8 @@ The steps:
 
 During the process of the analysis and solution of this project it was concluded: 
 
-
+The cost of the simulation can be reduced by changing the parameters of the QAOA circuit. In this case we decided to change the ammount of shots of the circuit. This variable can be reduced depending on the ammount of qubits needed to simulate the circuit. Since here we have 4 qubits there are $2^4$
+possible states. The number of shots has to be chossen taking into account the ammount of possible states.
 
 
 Besides that we not only stayed with the general idea of max cut with QAOA, but we found direct applications in different areas, which one that caught our attention is the application in spin glass(1), which is important in materials science. Something interesting in these cases is the existence of negative weights, which when processed by the QAOA system increased the amount of solutions and therefore the resources needed to develop this kind of problems.  
