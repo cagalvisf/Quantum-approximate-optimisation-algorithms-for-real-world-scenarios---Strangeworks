@@ -1,17 +1,51 @@
+# QHang
+Hackaton Womanium
+
+
+## Members
+* Cristian Galvis
+  * Cristian2407
+  * GitHub ID: cagalvisf
+  * email:     cagalvisf@unal.edu.co
+* Manuel Torres
+  * Discord: Manuel Sebastian Torres
+  * GITHUB ID: mstorresh
+  * email:     mstorresh@unal.edu.co
+
+## Pitch Presenter
+
+Cristian
+
 # Quantum-approximate-optimisation-algorithms-for-real-world-scenarios---Strangeworks
-Womanium Quantum Hackathon 2022
 
-## Challenge Introduction
-Current noisy intermediate scale quantum computers (NISQ) may be well suited to solving quantum approximate optimisation algorithms (QAOA) with some promising initial proof of principle results. These can be applied to solve a wide variety of problems such as the max-cut or traveling salesman problems, which are extremely relevant to real world scenarios useful for optimizing global supply chains for example. Classically they are extremely difficult to solve for an optimal solution, with a computational cost that scales exponentially with the number of parameters. 
-We find that what many of our partners really want at this stage is to know how much quantum solutions to these problems are going to cost! This is very important because time on quantum hardware is currently extremely expensive. While they of course are interested in defining and quantifying how well these methods will actually work, their real world budgeting constraints is what will most impact the viability as far as they see it. 
-This project will involve creating and testing a QAOA algorithm on a chosen graph. The accuracy of this method will then be tested upon varying the number of classical optimization steps, the depth of the quantum circuit and the number of measurements required on the quantum device at each step etc. This will then allow us to define the total classical hardware time and the total quantum hardware time, giving us an initial estimate for the overall cost of running such an algorithm.
-For many real world scenarios we do not necessarily need the most optimal solution, just one that is better than those currently utilized, so we will be judging submissions based on an analysis which balances the overall cost of the routine with the quality of the solution. Additional points will be given for the presentation and interpretation of the data in terms of the viability of these methods as the graph size and complexity are increased. We will also be looking for more advanced offerings, such as methods for post processing the quantum measurement results to better refine the classical solution of the graph and sufficient explorations in the space of connected graphs as well as explorations of the parameter space for the variational coefficients.
+## Introduction
 
-### Installing Python and VS code
+Several of the topics that are currently emerging have problems due to the amount of computational resources that are required, from studying new DNA behaviors, to organizing sporting events or analyzing structures with new materials. All these cases have required a tremendous computational power, which classical computing has not been able to solve completely, due to the fact that the cost grows exponentially with the number of parameters that the problem has.
+Therefore, one of the options to solve this problem is the Quantum approximate optimisation algorithms (QAOA). This method is reliable but has the detail that the time in Quantum Hardware is expensive, so the idea of the project is to find a way to reduce slightly the costs of this method and hope that in the future it will be smaller and more optimal than the classical models.   
 
-We recommend opening this notebook with VS code. A handy guide for doing so is here: https://code.visualstudio.com/docs/python/python-tutorial   
 
-For those that don't know, a Jupyter notebook is a convenient way of running python code, where code segments are seperated into "cells". It is then possible to run each cell one by one, usually it is good practice to start at the top and run each subsequent cell one by one. Variables are typically global i.e. variables defined in cells can be called in cells positioned below. 
+## Solution
 
-The only prerequisite is that you can run the first cell in the notebook "Intro.ipynb". This checks the version of python you currently have installed. If you can run this successfully, then you should be able to run the rest of the notebook. 
+The component of the problem proposed by Strangeworks is to approach the maximum cut problem from a graph representation of the project. This problem mainly suggests working with 4 binary nodes. Using this representation, we start with the QAOA process of finding the minimum energy of the Hamiltonian. With this in mind, We would like to know the cost of doing it with the QOAO. 
+
+The steps: 
+* Define the Graph with the weights and 4 nodes
+* Obtain the Hamiltonian from the graph 
+* Getting the exact solution (obtain the exact ground state of the Hamiltonian)
+* Initialize the parameters (the 2 angles)
+  * Preparing the state with the qaoa circuit, measure and compute the expectation value.
+  * Finding the new values of parameters
+  * repeat the process     
+
+
+## Discussion 
+
+During the process of the analysis and solution of this project it was concluded: 
+
+
+
+
+Besides that we not only stayed with the general idea of max cut with QAOA, but we found direct applications in different areas, which one that caught our attention is the application in spin glass(1), which is important in materials science. Something interesting in these cases is the existence of negative weights, which when processed by the QAOA system increased the amount of solutions and therefore the resources needed to develop this kind of problems.  
+ 
+(1) "A spin glass is a disordered magnetic state where the spatial average of the magnetization over the sites is zero while the time average of the orientation of any given spin is non-zero, in contrast to a paramagnet where both averages are zero." Taken from: https://www.sciencedirect.com/topics/materials-science/spin-glass
 
